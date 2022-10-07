@@ -38,7 +38,7 @@ class LinkedList:
     # O(n^2)  
     def sortRecursively(self, firstNode, secondNode):
         
-        if (firstNode.next == None or secondNode == None):
+        if (firstNode.next == None):
             return;
         
         if (firstNode.data > secondNode.data):
@@ -49,7 +49,7 @@ class LinkedList:
         
         if (secondNode.next == None):
             firstNode = firstNode.next;
-            secondNode = firstNode.next;
+            secondNode = firstNode;
             
         self.sortRecursively(firstNode, secondNode.next);
         
